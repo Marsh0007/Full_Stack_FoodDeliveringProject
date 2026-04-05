@@ -186,7 +186,7 @@ npm run dev
 If everything is correct, the backend should run on:
 
 ```text
-http://localhost:5000
+http://https://full-stack-fooddeliveringproject.onrender.com
 ```
 
 ### 2. Run the frontend

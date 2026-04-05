@@ -19,7 +19,7 @@ let allCategories = [];
 
 async function loadCategories() {
   try {
-    const response = await fetch("http://localhost:5000/api/categories/all");
+    const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/categories/all");
     const categories = await response.json();
 
     allCategories = Array.isArray(categories) ? categories : [];
@@ -39,7 +39,7 @@ async function loadCategories() {
 
 async function loadAdminProducts() {
   try {
-    const response = await fetch("http://localhost:5000/api/products/all");
+    const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/products/all");
     const products = await response.json();
 
     allProducts = Array.isArray(products) ? products : [];
@@ -105,7 +105,7 @@ productForm.addEventListener("submit", async function (e) {
     let response;
 
     if (productId) {
-      response = await fetch(`http://localhost:5000/api/products/update/${productId}`, {
+      response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/products/update/${productId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ productForm.addEventListener("submit", async function (e) {
         body: JSON.stringify(productData)
       });
     } else {
-      response = await fetch("http://localhost:5000/api/products/add", {
+      response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/products/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -168,7 +168,7 @@ async function deleteProduct(productId) {
   if (!confirmDelete) return;
 
   try {
-    const response = await fetch(`http://localhost:5000/api/products/delete/${productId}`, {
+    const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/products/delete/${productId}`, {
       method: "DELETE",
       headers: {
         "Authorization": `Bearer ${token}`

@@ -15,3 +15,4 @@ INSERT INTO products (product_name, description, price, image_url, stock, catego
 ('Gado Gado', 'Traditional Indonesian salad', 6.50, 'assets/images/gadogado.jpg', 18, 5),
 ('Batagor', 'Fried fish dumplings', 5.99, 'assets/images/batagor.jpg', 18, 5);
 
+select * from users;

@@ -7,7 +7,7 @@ async function loadWeatherByCoords(lat, lon) {
     weatherBox.innerHTML = "<p>Loading weather...</p>";
 
     const response = await fetch(
-      `http://localhost:5000/api/weather?lat=${lat}&lon=${lon}`
+      `http://https://full-stack-fooddeliveringproject.onrender.com/api/weather?lat=${lat}&lon=${lon}`
     );
 
     const data = await response.json();
@@ -63,7 +63,7 @@ async function loadWeatherByCity(city = "Berlin") {
     weatherBox.innerHTML = "<p>Loading weather...</p>";
 
     const response = await fetch(
-      `http://localhost:5000/api/weather?city=${encodeURIComponent(city)}`
+      `http://https://full-stack-fooddeliveringproject.onrender.com/api/weather?city=${encodeURIComponent(city)}`
     );
 
     const data = await response.json();

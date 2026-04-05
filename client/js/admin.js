@@ -12,7 +12,7 @@ async function loadAdminAnalytics() {
   deliveredOrders.textContent = "0";
 
   try {
-    const productsResponse = await fetch("http://localhost:5000/api/products/all", {
+    const productsResponse = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/products/all", {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -29,7 +29,7 @@ async function loadAdminAnalytics() {
   }
 
   try {
-    const ordersResponse = await fetch("http://localhost:5000/api/orders/all", {
+    const ordersResponse = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/orders/all", {
       headers: {
         Authorization: `Bearer ${token}`
       }

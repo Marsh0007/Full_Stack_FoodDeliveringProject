@@ -13,7 +13,7 @@ if (!user || !token) {
 
 async function loadCart() {
   try {
-    const response = await fetch(`http://localhost:5000/api/cart/${user.user_id}`, {
+    const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/cart/${user.user_id}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -99,7 +99,7 @@ async function updateQuantity(cartItemId, newQuantity) {
   }
 
   try {
-    const response = await fetch(`http://localhost:5000/api/cart/update/${cartItemId}`, {
+    const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/cart/update/${cartItemId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -123,7 +123,7 @@ async function updateQuantity(cartItemId, newQuantity) {
 
 async function removeItem(cartItemId) {
   try {
-    const response = await fetch(`http://localhost:5000/api/cart/remove/${cartItemId}`, {
+    const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/cart/remove/${cartItemId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`

@@ -86,7 +86,7 @@ function openSection(sectionToOpen) {
 
 async function loadProfile() {
   try {
-    const response = await fetch(`http://localhost:5000/api/auth/profile/${userId}`, {
+    const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/auth/profile/${userId}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -142,7 +142,7 @@ if (profileForm) {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/update-profile", {
+      const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/auth/update-profile", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -197,7 +197,7 @@ if (passwordForm) {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/reset-password", {
+      const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/auth/reset-password", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
