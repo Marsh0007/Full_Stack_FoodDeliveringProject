@@ -201,3 +201,38 @@ client/index.html
 or open the main pages directly through Live Server.
 
 ---
+
+## Demo Admin Access
+
+Admin Email: [admin@example.com](mailto:admin@example.com)
+Admin Password: admin123
+
+
+---
+
+## Main API Routes
+
+* /api/auth/register
+* /api/auth/login
+* /api/products/all
+* /api/cart/:user_id
+* /api/orders/place
+* /api/orders/all
+* /api/weather/current
+
+---
+
+## Deployment
+
+Frontend can be deployed using Vercel.
+
+Backend can be deployed using Render.
+
+Production deployment requires adding environment variables manually in the hosting platform:
+* DB_HOST
+* DB_USER
+* DB_PASSWORD
+* DB_NAME
+* JWT_SECRET
+* OPENWEATHER_API_KEY
+After deployment, frontend API calls should point to the backend deployment URL.
