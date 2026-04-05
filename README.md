@@ -231,11 +231,8 @@ Password: admin123
 Frontend (Vercel): https://full-stack-food-delivering-project.vercel.app
 Backend (Render): https://full-stack-fooddeliveringproject.onrender.com
 
-Production deployment requires adding environment variables manually in the hosting platform:
-* DB_HOST
-* DB_USER
-* DB_PASSWORD
-* DB_NAME
-* JWT_SECRET
-* OPENWEATHER_API_KEY
-After deployment, frontend API calls should point to the backend deployment URL.
+##Note
+
+Sensitive environment variables are excluded for security reasons.
+The live deployed version can be tested directly using the links above.
+
