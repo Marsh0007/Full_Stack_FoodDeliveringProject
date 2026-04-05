@@ -24,7 +24,7 @@ async function loadCategories() {
   if (!categoryFilter) return;
 
   try {
-    const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/categories/all");
+    const response = await fetch("https://full-stack-fooddeliveringproject.onrender.com/api/categories/all");
     const categories = await response.json();
 
     allCategories = categories;
@@ -45,7 +45,7 @@ async function loadProducts() {
   if (!productsContainer) return;
 
   try {
-    const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/products/all");
+    const response = await fetch("https://full-stack-fooddeliveringproject.onrender.com/api/products/all");
     const products = await response.json();
 
     allProducts = products;
@@ -148,7 +148,7 @@ function filterProducts() {
 
 async function addToCart(productId) {
   try {
-    const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/cart/add", {
+    const response = await fetch("https://full-stack-fooddeliveringproject.onrender.com/api/cart/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

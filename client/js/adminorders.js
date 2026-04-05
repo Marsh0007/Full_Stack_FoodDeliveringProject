@@ -9,7 +9,7 @@ async function loadAllOrders() {
   }
 
   try {
-    const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/orders/all", {
+    const response = await fetch("https://full-stack-fooddeliveringproject.onrender.com/api/orders/all", {
       headers: {
         "Authorization": `Bearer ${token}`
       }
@@ -98,7 +98,7 @@ async function updateStatus(orderId) {
   const newStatus = select.value;
 
   try {
-    const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/orders/status/${orderId}`, {
+    const response = await fetch(`https://full-stack-fooddeliveringproject.onrender.com/api/orders/status/${orderId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

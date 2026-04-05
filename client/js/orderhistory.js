@@ -10,7 +10,7 @@ if (!user || !token) {
 
 async function loadOrderHistory() {
   try {
-    const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/orders/user/${user.user_id}`, {
+    const response = await fetch(`https://full-stack-fooddeliveringproject.onrender.com/api/orders/user/${user.user_id}`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }

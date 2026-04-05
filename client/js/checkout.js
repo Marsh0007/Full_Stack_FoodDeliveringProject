@@ -10,7 +10,7 @@ if (!user || !token) {
 }
 
 async function loadCheckoutTotal() {
-  const response = await fetch(`http://https://full-stack-fooddeliveringproject.onrender.com/api/cart/${user.user_id}`);
+  const response = await fetch(`https://full-stack-fooddeliveringproject.onrender.com/api/cart/${user.user_id}`);
   const cartItems = await response.json();
 
   let total = 0;
@@ -30,7 +30,7 @@ checkoutForm.addEventListener("submit", async (e) => {
   const paymentMethod = document.getElementById("paymentMethod").value;
 
   try {
-    const response = await fetch("http://https://full-stack-fooddeliveringproject.onrender.com/api/orders/place", {
+    const response = await fetch("https://full-stack-fooddeliveringproject.onrender.com/api/orders/place", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
