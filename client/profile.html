@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Food Delivery</title>
+  <link rel="stylesheet" href="../client/css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="page-hero small-hero">
+    <div class="page-hero-content">
+      <h1>My Dashboard</h1>
+      <p>Manage your profile, password, and orders in one place.</p>
+    </div>
+  </section>
+
+  <section class="profile-page">
+    <div class="profile-dashboard">
+
+      <div class="profile-layout">
+
+        <div class="profile-summary-card">
+          <div class="profile-summary-top">
+            <div class="profile-avatar" id="profileAvatar">U</div>
+
+            <div class="profile-summary-text">
+              <span class="profile-badge">Account Overview</span>
+              <h2 id="displayName">User Name</h2>
+              <p class="profile-subtitle">Your account details and quick access area</p>
+            </div>
+          </div>
+
+          <div class="profile-info-list">
+            <div class="profile-info-item">
+              <span class="info-label">Email</span>
+              <span class="info-value" id="displayEmail">example@email.com</span>
+            </div>
+
+            <div class="profile-info-item">
+              <span class="info-label">Phone</span>
+              <span class="info-value" id="displayPhone">Not added</span>
+            </div>
+
+            <div class="profile-info-item">
+              <span class="info-label">Joined</span>
+              <span class="info-value" id="displayJoined">Not available</span>
+            </div>
+
+            <div class="profile-info-item">
+              <span class="info-label">Role</span>
+              <span class="info-value" id="displayRole">customer</span>
+            </div>
+          </div>
+
+          <div class="profile-action-buttons">
+            <button class="btn btn-primary" id="toggleEditBtn">Edit Profile</button>
+            <button class="btn btn-outline-dark" id="togglePasswordBtn">Reset Password</button>
+          </div>
+        </div>
+
+        <div class="profile-extra-section">
+
+          <div class="profile-form-card hidden" id="editProfileCard">
+            <div class="card-header-row">
+              <div>
+                <h3>Edit Profile</h3>
+                <p>Update your personal information here.</p>
+              </div>
+            </div>
+
+            <form id="profileForm">
+              <div class="profile-form-grid">
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" id="phone" />
+                </div>
+
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text" id="address" />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+
+            <p id="profileMessage" class="form-message"></p>
+          </div>
+
+          <div class="profile-form-card hidden" id="passwordCard">
+            <div class="card-header-row">
+              <div>
+                <h3>Reset Password</h3>
+                <p>Change your password securely.</p>
+              </div>
+            </div>
+
+            <form id="passwordForm">
+              <div class="form-group">
+                <label for="currentPassword">Current Password</label>
+                <input type="password" id="currentPassword" required />
+              </div>
+
+              <div class="form-group">
+                <label for="newPassword">New Password</label>
+                <input type="password" id="newPassword" required />
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Confirm New Password</label>
+                <input type="password" id="confirmPassword" required />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Update Password</button>
+            </form>
+
+            <p id="passwordMessage" class="form-message"></p>
+          </div>
+
+          <div class="profile-form-card">
+            <div class="card-header-row">
+              <div>
+                <h3>Quick Actions</h3>
+                <p>Go to your most important pages quickly.</p>
+              </div>
+            </div>
+
+            <div class="quick-links">
+              <a href="orderhistory.html" class="quick-link-card">
+                <span class="quick-link-icon">📦</span>
+                <div>
+                  <h4>View Past Orders</h4>
+                  <p>Check all your previously placed orders</p>
+                </div>
+              </a>
+
+              <a href="products.html" class="quick-link-card">
+                <span class="quick-link-icon">🍔</span>
+                <div>
+                  <h4>Browse Products</h4>
+                  <p>Explore meals and offers</p>
+                </div>
+              </a>
+
+              <a href="cart.html" class="quick-link-card">
+                <span class="quick-link-icon">🛒</span>
+                <div>
+                  <h4>Go to Cart</h4>
+                  <p>Review items before checkout</p>
+                </div>
+              </a>
+
+              <button id="logoutBtn" class="quick-link-card logout-card" type="button">
+                <span class="quick-link-icon">🚪</span>
+                <div>
+                  <h4>Logout</h4>
+                  <p>Sign out from your current account</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script src="../client/js/navbar.js"></script>
+  <script src="../client/js/profile.js"></script>
+</body>
+</html>

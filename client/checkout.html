@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Food Delivery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <div class="checkout-page">
+
+    <h1>Checkout</h1>
+
+    <form id="checkoutForm">
+      <input type="text" id="address" placeholder="Delivery Address" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+
+      <select id="paymentMethod">
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="Card">Card</option>
+      </select>
+
+      <h2>Total: €<span id="checkoutTotal">0</span></h2>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+  <div id="footer"></div>
+  <script src="js/checkout.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

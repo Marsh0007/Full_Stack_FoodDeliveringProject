@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Orders | Food Delivery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <script>
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    if (!user || user.role !== "admin") {
+      alert("Access denied");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <div id="adminNavbar"></div>
+
+  <div class="orders-page">
+  <h1>Manage Orders</h1>
+  <div id="ordersContainer"></div>
+</div>
+
+  <script src="js/adminorders.js"></script>
+  <script src="js/adminnavbar.js"></script>
+
+</body>
+</html>

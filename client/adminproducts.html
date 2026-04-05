@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Product Management</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <script>
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    if (!user || user.role?.toLowerCase() !== "admin") {
+      alert("Access denied");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <div id="adminNavbar"></div>
+
+  <section class="admin-products-page">
+    <h1>Manage Products</h1>
+
+    <div class="admin-product-form-box">
+      <h2 id="formTitle">Add New Product</h2>
+
+      <form id="productForm">
+        <input type="hidden" id="productId" />
+
+        <div class="form-row">
+          <input type="text" id="productName" placeholder="Product Name" required />
+          <input type="number" id="productPrice" placeholder="Price" step="0.01" required />
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="productImage" placeholder="Image URL" />
+          <input type="number" id="productStock" placeholder="Stock" required />
+        </div>
+
+        <div class="form-row">
+          <select id="productCategory" required>
+            <option value="">Select Category</option>
+          </select>
+        </div>
+
+        <textarea id="productDescription" placeholder="Description" rows="4" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" id="saveBtn">Add Product</button>
+          <button type="button" id="cancelEditBtn" style="display: none;">Cancel Edit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="admin-products-list">
+      <h2>All Products</h2>
+      <div id="adminProductsContainer" class="admin-products-grid"></div>
+    </div>
+  </section>
+
+  <script src="js/adminnavbar.js"></script>
+  <script src="js/adminproducts.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Food Delivery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <script>
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    if (!user || user.role !== "admin") {
+      alert("Access denied");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <div id="adminNavbar"></div>
+
+  <div class="admin-page">
+    <h1>Admin Dashboard</h1>
+
+    <!-- Analytics Section -->
+    <div class="analytics-grid">
+      <div class="analytics-card">
+        <h3>Total Products</h3>
+        <p id="totalProducts">0</p>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Total Orders</h3>
+        <p id="totalOrders">0</p>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Pending Orders</h3>
+        <p id="pendingOrders">0</p>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Delivered Orders</h3>
+        <p id="deliveredOrders">0</p>
+      </div>
+    </div>
+
+    <!-- Admin Navigation -->
+    <div class="admin-grid">
+      <a href="adminproducts.html" class="admin-card">
+        <h2>Products</h2>
+        <p>Manage available food products</p>
+      </a>
+
+      <a href="adminorders.html" class="admin-card">
+        <h2>Manage Orders</h2>
+        <p>View and update customer orders</p>
+      </a>
+
+      <a href="orderhistory.html" class="admin-card">
+        <h2>Order History</h2>
+        <p>View customer placed orders</p>
+      </a>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+  <script src="js/adminnavbar.js"></script>
+</body>
+</html>

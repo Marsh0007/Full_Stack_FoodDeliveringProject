@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | Food Delivery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <section class="cart-page">
+    <div class="cart-header">
+      <a href="products.html" class="back-link">← Back to Products</a>
+      <span class="cart-badge">Your Basket</span>
+      <h1>Your Cart</h1>
+      <p>Review your selected meals before moving to checkout.</p>
+    </div>
+
+    <div class="cart-layout">
+      <div class="cart-items-section">
+        <div id="cartContainer"></div>
+      </div>
+
+      <div class="cart-summary" id="cartSummary" style="display: none;">
+        <h3>Order Summary</h3>
+
+        <div class="summary-row">
+          <span>Total Amount</span>
+          <strong>€<span id="cartTotal">0</span></strong>
+        </div>
+
+        <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        <a href="products.html" class="continue-shopping-btn">Continue Shopping</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
