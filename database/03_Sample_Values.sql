@@ -1,8 +1,17 @@
-UPDATE Products SET image_url='assets/images/margherita.jpg' WHERE product_id=1;
-UPDATE Products SET image_url='assets/images/pepperoni.jpg' WHERE product_id=2;
-UPDATE Products SET image_url='assets/images/chickenburger.jpg' WHERE product_id=3;
-UPDATE Products SET image_url='assets/images/vegburger.jpg' WHERE product_id=4;
-UPDATE Products SET image_url='assets/images/coke.jpg' WHERE product_id=5;
-UPDATE Products SET image_url='assets/images/cake.jpg' WHERE product_id=6;
-UPDATE Products SET image_url='assets/images/cheeseburger.jpg' WHERE product_id=7;
-UPDATE Products SET image_url='assets/images/churros.jpg' WHERE product_id=9;
+INSERT INTO categories (category_name) VALUES
+('Burger'),
+('Pizza'),
+('Drinks'),
+('Dessert'),
+('Local Food');
+
+INSERT INTO products (product_name, description, price, image_url, stock, category_id) VALUES
+('Cheese Burger', 'Juicy beef burger with cheese', 8.99, 'assets/images/cheeseburger.jpg', 20, 1),
+('Chicken Burger', 'Grilled chicken burger with sauce', 7.99, 'assets/images/chickenburger.jpg', 20, 1),
+('Pepperoni Pizza', 'Classic pepperoni pizza', 12.50, 'assets/images/pepperoni.jpg', 15, 2),
+('Margherita Pizza', 'Cheese and tomato pizza', 11.00, 'assets/images/margherita.jpg', 15, 2),
+('Coke', 'Cold soft drink', 2.50, 'assets/images/coke.jpg', 50, 3),
+('Cake', 'Sweet dessert cake slice', 4.50, 'assets/images/cake.jpg', 25, 4),
+('Gado Gado', 'Traditional Indonesian salad', 6.50, 'assets/images/gadogado.jpg', 18, 5),
+('Batagor', 'Fried fish dumplings', 5.99, 'assets/images/batagor.jpg', 18, 5);
+
