@@ -49,10 +49,14 @@ Node.js
 Express.js
 
 ### Database
-MySQL
+MySQL (Aiven cloud database)
 
 ### External API
 OpenWeather API
+
+### Deployment
+Vercel (Frontend)
+Render (Backend)
 
 
 ## Project Structure
@@ -161,13 +165,13 @@ Full_Stack_FoodDeliveringProject/
 Create or update `server/.env` with your own values:
 
 ```env
-DB_HOST=localhost
-DB_USER=your_mysql_username
-DB_PASSWORD=your_mysql_password
-DB_NAME=your_database_name
-JWT_SECRET=your_jwt_secret
-PORT=5000
-OPENWEATHER_API_KEY=your_openweather_api_key
+DB_HOST=your_host
+DB_USER=your_user
+DB_PASSWORD=your_password
+DB_NAME=your_database
+DB_PORT=your_port
+JWT_SECRET=your_secret
+OPENWEATHER_API_KEY=your_key
 ```
 
 ---
@@ -204,8 +208,8 @@ or open the main pages directly through Live Server.
 
 ## Demo Admin Access
 
-Admin Email: [admin@example.com](mailto:admin@example.com)
-Admin Password: admin123
+Email: admin@test.com
+Password: admin123
 
 
 ---
@@ -224,9 +228,8 @@ Admin Password: admin123
 
 ## Deployment
 
-Frontend can be deployed using Vercel.
-
-Backend can be deployed using Render.
+Frontend (Vercel): https://full-stack-food-delivering-project.vercel.app
+Backend (Render): https://full-stack-fooddeliveringproject.onrender.com
 
 Production deployment requires adding environment variables manually in the hosting platform:
 * DB_HOST
