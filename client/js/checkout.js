@@ -4,6 +4,8 @@ const checkoutForm = document.getElementById("checkoutForm");
 const user = JSON.parse(sessionStorage.getItem("user"));
 const token = sessionStorage.getItem("token");
 
+emailjs.init("kRVeqrx5cAXDTjpHO");
+
 if (!user || !token) {
   alert("Please login first");
   window.location.href = "login.html";
@@ -47,6 +49,22 @@ checkoutForm.addEventListener("submit", async (e) => {
     const data = await response.json();
 
     if (response.ok) {
+      console.log("User object:", user);
+      console.log("Sending to email:", user.email);
+
+      try {
+        const emailResponse = await emailjs.send("service_2njldxt", "template_nuq3ok7", {
+          user_name: user.name || user.username || "Customer",
+          user_email: user.email,
+          address: address,
+          payment_method: paymentMethod
+        });
+
+        console.log("Email sent successfully:", emailResponse);
+      } catch (error) {
+        console.error("Email failed:", error);
+      }
+
       alert("Order placed successfully");
       window.location.href = "orderhistory.html";
     } else {
