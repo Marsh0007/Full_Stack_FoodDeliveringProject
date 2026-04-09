@@ -5,6 +5,16 @@ A full-stack food delivery web application
 This system allows customers to browse products, add items to cart, place orders, manage profiles, and view order history.  
 It also has an admin dashboard for product management, category control, and order monitoring.
 
+---
+
+## Deployment
+
+Frontend (Vercel): https://full-stack-food-delivering-project.vercel.app
+---
+Backend (Render): https://full-stack-fooddeliveringproject.onrender.com
+
+---
+
 
 ## Features
 
@@ -225,11 +235,6 @@ Password: admin123
 * /api/weather/current
 
 ---
-
-## Deployment
-
-Frontend (Vercel): https://full-stack-food-delivering-project.vercel.app
-Backend (Render): https://full-stack-fooddeliveringproject.onrender.com
 
 ##Note
 
