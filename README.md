@@ -9,6 +9,7 @@ It also has an admin dashboard for product management, category control, and ord
 
 ## Deployment
 
+---
 Frontend (Vercel): https://full-stack-food-delivering-project.vercel.app
 ---
 Backend (Render): https://full-stack-fooddeliveringproject.onrender.com
